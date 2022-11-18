@@ -87,11 +87,22 @@ namespace App_Project_Management.Views
 
         public void LoadMemberWithWord()
         {
-            if (!frmLogin.account.Role.Equals(Cons.ROLE.TL))
+            if (frmLogin.account.Role.Equals(Cons.ROLE.TL))
             {
                 try
                 {
-                    dtgvMember.DataSource = dbMem.searchMemberInCompanyByName((int)frmLogin.account.Company_id, this.txbsearch.Text);
+                    dtgvMember.DataSource = dbMem.searchMemberInTeamByName((int)frmLogin.account.Team_id, this.txbsearch.Text);
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+                }
+            }
+            else if (frmLogin.account.Role.Equals(Cons.ROLE.SA))
+            {
+                try
+                {
+                    dtgvMember.DataSource = dbMem.searchMemberByName(this.txbsearch.Text);
                 }
                 catch (SqlException)
                 {
@@ -102,7 +113,7 @@ namespace App_Project_Management.Views
             {
                 try
                 {
-                    dtgvMember.DataSource = dbMem.searchMemberInTeamByName((int)frmLogin.account.Team_id, this.txbsearch.Text);
+                    dtgvMember.DataSource = dbMem.searchMemberInCompanyByName((int)frmLogin.account.Company_id, this.txbsearch.Text);
                 }
                 catch (SqlException)
                 {
