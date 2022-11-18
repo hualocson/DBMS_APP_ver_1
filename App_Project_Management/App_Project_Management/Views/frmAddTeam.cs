@@ -36,7 +36,7 @@ namespace App_Project_Management.Views
             {
                 // Thực hiện lệnh 
                 BSTeam bsteam = new BSTeam();
-                bsteam.addTeam(this.txbname.Text, this.txbabbreviation.Text, TDModel.Company_id, ref err);
+                bsteam.addTeam(this.txbName.Text, this.txbAbbreviation.Text, TDModel.Company_id, ref err);
                 // Load lại dữ liệu trên DataGridView
                 // Thông báo 
                 this.Close();
@@ -50,8 +50,13 @@ namespace App_Project_Management.Views
 
         private void frmAddTeam_Load(object sender, EventArgs e)
         {
-            txbname.Text = TDModel.Name;
-            txbabbreviation.Text = TDModel.Abbreviation;
+            txbName.Text = TDModel.Name;
+            txbAbbreviation.Text = TDModel.Abbreviation;
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

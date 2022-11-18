@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using App_Project_Management.Views;
 using Bunifu.UI.WinForms;
 using App_Project_Management.Model;
+using Bunifu.UI.WinForms.BunifuButton;
 
 namespace App_Project_Management
 {
@@ -21,6 +22,13 @@ namespace App_Project_Management
         static public int currentProjectID = 0;
         private void changePage()
         {
+            if (activePage == 3)
+            {
+                btnTask.Visible = true;
+                btnTask_Click(new object(), new EventArgs());
+            }
+            else
+                btnTask.Visible = false;
             main.PageIndex = activePage;
         }
         public frmMain()
@@ -50,6 +58,9 @@ namespace App_Project_Management
             changePage();
         }
 
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+        }
 
         private void btnHide_Click(object sender, EventArgs e)
         {
@@ -68,7 +79,9 @@ namespace App_Project_Management
         {
             changePage();
             showUI();
-            lbAcc.Text = $"{frmLogin.account.Name}, {frmLogin.account.Id}";
+
+            lbAccName.Text = frmLogin.account.Name;
+            lbAccRole.Text = frmLogin.account.getAccRole();
         }
 
         private void showUI()
@@ -113,5 +126,6 @@ namespace App_Project_Management
         {
             Close();
         }
+
     }
 }

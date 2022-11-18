@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.Design.WebControls;
@@ -54,6 +55,27 @@ namespace App_Project_Management.Model
             // Login Success
             setValueForInstance(this.id);
             return true;
+        }
+
+        public string getAccRole()
+        {
+            string res = "";
+            switch (role)
+            {
+                case Cons.ROLE.SA:
+                    res = "Super Admin";
+                    break;
+                case Cons.ROLE.PM:
+                    res = "Project Manager";
+                    break;
+                case Cons.ROLE.TL:
+                    res = "Team Lead";
+                    break;
+                case Cons.ROLE.TM:
+                    res = "Team Member";
+                    break;
+            }
+            return res;
         }
         #endregion
 

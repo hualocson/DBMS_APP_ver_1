@@ -233,10 +233,10 @@
             this.pnlProjectTableFilter.Controls.Add(this.txbsearch);
             this.pnlProjectTableFilter.Controls.Add(this.button1);
             this.pnlProjectTableFilter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlProjectTableFilter.Location = new System.Drawing.Point(172, 0);
+            this.pnlProjectTableFilter.Location = new System.Drawing.Point(265, 0);
             this.pnlProjectTableFilter.Name = "pnlProjectTableFilter";
             this.pnlProjectTableFilter.ShowBorders = true;
-            this.pnlProjectTableFilter.Size = new System.Drawing.Size(866, 50);
+            this.pnlProjectTableFilter.Size = new System.Drawing.Size(773, 50);
             this.pnlProjectTableFilter.TabIndex = 2;
             // 
             // bunifuImageButton2
@@ -260,7 +260,7 @@
             this.bunifuImageButton2.ImageSize = new System.Drawing.Size(29, 29);
             this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(30, 30);
             this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
-            this.bunifuImageButton2.Location = new System.Drawing.Point(823, 10);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(730, 11);
             this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(10);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Rotation = 0;
@@ -302,7 +302,7 @@
             this.txbsearch.IconRight = null;
             this.txbsearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbsearch.Lines = new string[0];
-            this.txbsearch.Location = new System.Drawing.Point(564, 5);
+            this.txbsearch.Location = new System.Drawing.Point(471, 6);
             this.txbsearch.Margin = new System.Windows.Forms.Padding(5);
             this.txbsearch.MaxLength = 32767;
             this.txbsearch.MinimumSize = new System.Drawing.Size(1, 1);
@@ -339,7 +339,7 @@
             this.txbsearch.SelectionLength = 0;
             this.txbsearch.SelectionStart = 0;
             this.txbsearch.ShortcutsEnabled = true;
-            this.txbsearch.Size = new System.Drawing.Size(244, 43);
+            this.txbsearch.Size = new System.Drawing.Size(244, 39);
             this.txbsearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txbsearch.TabIndex = 3;
             this.txbsearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
